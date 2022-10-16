@@ -565,8 +565,62 @@ h1 {
         background-color: var(--background-accent);
 }
 
-textarea {
-        resize: none;
+.footer-form {
+        margin-left: 93px;
+}
+
+.footer-form-title {
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        
+        color: var(--white);
+}
+
+.footer-button {
+        position: relative;
+        margin: 0;
+        margin-left: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 62px;
+        padding-left: 28px;
+
+        border-radius: 4px;
+        border: 1px solid transparent;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        
+        color: var(--white);
+        background-color: var(--background-accent);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+}
+
+.footer-input {
+        width: 358px;
+        height: 50px;
+        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: var(--background-footer);
+}
+
+.footer-button-icon {
+        position: absolute;
+        top: 50%;
+        left: 148px;
+        transform: translate(-50%, -50%);
+        margin-left: 10px;
 }
 
 /* portfolio */
@@ -781,4 +835,46 @@ textarea {
         border-radius: 50%;
 
         cursor: pointer;
+}
+
+textarea {
+        resize: none;
+}
+
+.modal-title {
+        margin-top: 40px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        
+        color: var(--main-color);
+}
+
+.modal-form-label {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        
+        color: var(--second-main-color);
+}
+
+
+
+
+
+.modal-button {
+        padding: 10px 52px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        
+        color: var(--white);
+        background: var(--background-accent);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

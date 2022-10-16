@@ -469,12 +469,18 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-form">
           <label for="email">
-            <h3>Підпишіться на розсилку</h3>
+            <h3 class="footer-form-title">Підпишіться на розсилку</h3>
           </label>
-          <input type="email" name="email" id="email" />
-          <button type="submit" class="footer-button">Підписатися</button>
+          <input class="footer-input" type="email" name="email" id="email" placeholder="E-mail"/>
+          <!-- <div class="footer-form-button"> -->
+            <button type="submit" class="footer-button">Підписатися
+            <svg class="footer-button-icon" width="24" height="24">
+              <use href="./images/symbol-defs_1.svg#icon-send"></use>
+            </svg>
+            </button>
+          <!-- </div> -->
         </div>
       </div>
     </footer>
@@ -487,34 +493,34 @@
           </svg>
         </button>
         <form>
-          <h2>Залиште свої дані, ми вам передзвонимо</h2>
+          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
 
-        <label for="name" >Ім'я</label>
+        <label class="modal-form-label" for="name" >Ім'я</label>
         <input type="text" name="name" id="name"/>
 
         <br/>
 
-        <label for="tel" >Телефон</label>
+        <label class="modal-form-label" for="tel" >Телефон</label>
         <input type="tel" name="tel" id="tel" />
 
         <br/>
 
-        <label for="email" >Пошта</label>
+        <label class="modal-form-label" for="email" >Пошта</label>
         <input type="email" name="email" id="email" />
         
         <br/>
 
-        <input type="checkbox" name="policy" id="policy" value="">
+        <label class="modal-form-label" for="comment">Коментар</label>
+        <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
+
+        <br/>
+        
+        <input class="modal-form-label" type="checkbox" name="policy" id="policy" value="">
         <label for="policy">Погоджуюся з розсилкою та приймаю Умови договору</label>
         
         <br/>
 
-        <label for="comment">Коментар</label>
-        <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
-
-        <br/>
-
-        <button type="submit" >Відправити</button>
+        <button class="modal-button" type="submit" >Відправити</button>
       </div>
     </div>
 
