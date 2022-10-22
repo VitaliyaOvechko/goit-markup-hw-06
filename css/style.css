@@ -566,6 +566,8 @@ h1 {
 }
 
 .footer-form {
+        display: flex;
+        flex-wrap: wrap;
         margin-left: 93px;
 }
 
@@ -582,10 +584,14 @@ h1 {
         color: var(--white);
 }
 
+.footer-form-wrap {
+        display: flex;
+        gap: 12px;
+}
+
 .footer-button {
         position: relative;
         margin: 0;
-        margin-left: 12px;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: 62px;
@@ -617,7 +623,18 @@ h1 {
         color: var(--white);
 }
 
+.footer-input::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        
+        letter-spacing: 0.03em;
+        
+        color: rgba(255, 255, 255, 0.6);
+}
+
 .footer-button-icon {
+        align-self: flex-end;
         position: absolute;
         top: 50%;
         left: 148px;
@@ -784,6 +801,7 @@ h1 {
 
 /* modal */
 
+
 .backdrop {
         position: fixed;
         top: 0;
@@ -810,6 +828,8 @@ h1 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
+
+        padding: 40px;
 
         min-width: 528px;
         min-height: 581px;
@@ -838,14 +858,19 @@ h1 {
         border-radius: 50%;
 
         cursor: pointer;
+
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textarea {
-        resize: none;
+.modal-close-button:hover,
+.modal-close-button:focus {
+        fill: var(--accent-color);
 }
 
 .modal-title {
-        margin-top: 40px;
+        margin-top: 0;
         margin-bottom: 12px;
         font-weight: 700;
         font-size: 20px;
@@ -856,12 +881,9 @@ textarea {
         color: var(--main-color);
 }
 
-.modal-form {
-        padding-right: 40px;
-        padding-left: 40px;
-}
-
 .modal-form-label {
+        display: block;
+        margin-bottom: 4px;
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.01em;
@@ -869,29 +891,71 @@ textarea {
         color: var(--second-main-color);
 }
 
+.modal-form-field {
+        margin-bottom: 10px;
+}
+
 .form-input {
         width: 100%;
         height: 40px;
+        padding-left: 42px;
 
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
+        outline: transparent;
+
+        transition-property: border;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus, .form-textarea:focus{
+        border: 1px solid var(--accent-color);
+}
+
+.form-input:focus + .form-input-icon {
+        fill: var(--accent-color);
+}
+
+.imput-wrap {
+        position: relative;
+}
+
+.form-input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
 }
 
 .form-textarea {
         width: 100%;
         height: 120px;
         padding: 12px 16px;
+        margin-bottom: 20px;
+        resize: none;
         
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
+        outline: transparent;
+
+        transition-property: border;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea::placeholder {
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.01em;
-        
         color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form-policy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
         font-size: 14px;
         line-height: 1.71;
         
@@ -900,10 +964,34 @@ textarea {
         color: var(--second-main-color);
 }
 
+.modal-form-policy span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 15px;
+        border: 1.8px solid var(--main-color);
+        border-radius: 2px;
+        fill: transparent;
+}
+
+.input-check:checked + .modal-form-policy span{
+        background-color: var(--background-accent);
+        border-color: transparent;
+        fill: var(--white);
+}
+
+.input-check {
+        transition-property: border-color;
+        transition-duration: 2050ms;
+        ransition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-check:focus +.modal-form-policy span {
+        border-color: var(--background-accent);
+}
+
 .policy-link {
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
         text-decoration-line: underline;
         
         color: var(--accent-color);
@@ -911,6 +999,10 @@ textarea {
 
 
 .modal-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
         padding: 10px 52px;
         border-radius: 4px;
         border: 1px solid transparent;
@@ -922,4 +1014,5 @@ textarea {
         color: var(--white);
         background: var(--background-accent);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
 }
