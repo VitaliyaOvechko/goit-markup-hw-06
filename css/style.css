@@ -497,16 +497,19 @@ h1 {
         letter-spacing: 0.03em;  
         color: var(--white)
 }
-.footer-address {
-        display: flex;
-        flex-direction: column;
+/* .footer-address */
+        /* display: block; */
+        /* flex-direction: column; */
 
+.footer-address-link {
+        display: block;
         font-style: normal;
         font-size: 14px;
         line-height: 1.71;
-        letter-spacing: 0.03em; 
+        letter-spacing: 0.03em;
         color: var(--white)
 }
+
 .footer-contact {
         margin-top: 9px;
 
@@ -566,12 +569,11 @@ h1 {
 }
 
 .footer-form {
-        display: flex;
-        flex-wrap: wrap;
         margin-left: 93px;
 }
 
 .footer-form-title {
+        display: inline-block;
         margin-top: 0;
         margin-bottom: 20px;
 
